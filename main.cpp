@@ -1,3 +1,4 @@
+#include "homework.h"
 #include <pcap.h>
 #include <stdbool.h>
 #include <stdio.h>
@@ -45,6 +46,7 @@ int main(int argc, char* argv[]) {
 			break;
 		}
 		printf("%u bytes captured\n", header->caplen);
+		print_tcp_packet((uint8_t*)packet);
 	}
 
 	pcap_close(pcap);
