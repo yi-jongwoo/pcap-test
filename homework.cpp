@@ -77,7 +77,7 @@ struct ipv6_addr{
 	uint8_t addr[16];
 	void prn(){
 		for(int i=0;i<8;i++){
-			if(i)printf("::");
+			if(i)printf(":");
 			print_byte(addr[i<<1]);
 			print_byte(addr[i<<1|1]);
 		}
